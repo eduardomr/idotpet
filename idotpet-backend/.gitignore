@@ -44,5 +44,4 @@ nb-configuration.xml
 # TLS Certificates
 .certs/
 
-# Relatórios automáticos do GitHub / Copilot
-.github/modernize/
+/uploads

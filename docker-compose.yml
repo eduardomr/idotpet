@@ -15,8 +15,10 @@ services:
       - idotpet-data:/var/lib/postgresql/data
 
   backend:
+    volumes:
+      - ./idotpet-backend/uploads:/deployments/uploads
     build:
-      context: .
+      context: ./idotpet-backend
       dockerfile: src/main/docker/Dockerfile.jvm
     container_name: idotpet-backend
     depends_on:

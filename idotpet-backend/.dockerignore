@@ -1,5 +1,6 @@
+# Ignora tudo
 *
-!target/*-runner
-!target/*-runner.jar
-!target/lib/*
-!target/quarkus-app/*
+
+# Permite apenas o build do Quarkus
+!target/
+!target/quarkus-app/**
