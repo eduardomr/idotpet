@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.ws.rs.NotFoundException;
 import jakarta.transaction.Transactional;
 import io.quarkus.panache.common.Page;
 
@@ -43,14 +44,14 @@ public class AnimalService {
 
     public AnimalResponse buscarPorId(Long id) {
         Animal animal = repository.findByIdOptional(id)
-                .orElseThrow(() -> new RuntimeException("Animal não encontrado"));
+                .orElseThrow(() -> new NotFoundException("Animal não encontrado"));
         return mapper.toResponse(animal);
     }
 
     @Transactional
     public void deletar(Long id) {
         if (!repository.deleteById(id)) {
-            throw new RuntimeException("Animal não encontrado");
+            throw new NotFoundException("Animal não encontrado");
         }
     }
 }
