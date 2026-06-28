@@ -53,6 +53,14 @@ idotpet/
 
 ---
 
+## 🧭 Documentação arquitetural
+
+As decisões públicas de arquitetura, evolução futura e módulos planejados estão em:
+
+* [docs/arquitetura.md](docs/arquitetura.md)
+
+---
+
 ## ⚙️ Como rodar o projeto
 
 ### 🔧 Pré-requisitos
