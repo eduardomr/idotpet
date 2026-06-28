@@ -91,6 +91,17 @@ docker compose up --build
 
 ---
 
+## 📚 Swagger / OpenAPI
+
+A documentação interativa da API fica disponível em:
+
+* Swagger UI: http://localhost:8080/swagger-ui
+* Especificação OpenAPI: http://localhost:8080/openapi
+
+Use o Swagger UI para visualizar endpoints, contratos de request/response e testar chamadas da API durante o desenvolvimento.
+
+---
+
 ## 🧪 Endpoints principais
 
 ### 📌 Animais
