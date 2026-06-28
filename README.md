@@ -94,6 +94,25 @@ docker compose up --build
 | GET    | /animais/{id} | Buscar por ID         |
 | DELETE | /animais/{id} | Remover               |
 
+#### Exemplo de cadastro com imagens:
+
+```json
+{
+  "nome": "Mel",
+  "descricao": "Cadela dócil para adoção",
+  "idade": 2,
+  "porte": "MEDIO",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "imagemUrls": [
+    "/uploads/foto-1.jpg",
+    "/uploads/foto-2.jpg"
+  ]
+}
+```
+
+Cada animal pode ter no máximo `5` imagens. O campo antigo `imagemUrl` ainda funciona para cadastro com uma única imagem, mas `imagemUrls` é o formato recomendado para novas telas.
+
 ---
 
 ### 🖼️ Upload de imagem
