@@ -110,6 +110,27 @@ curl -X POST http://localhost:8080/upload \
   -F "file=@imagem.jpg"
 ```
 
+#### Resposta:
+
+```json
+{
+  "fileName": "arquivo-gerado.jpg",
+  "url": "/uploads/arquivo-gerado.jpg",
+  "contentType": "image/jpeg",
+  "size": 123456
+}
+```
+
+O campo `url` é relativo para funcionar melhor com frontend, proxy reverso e ambientes de produção.
+
+Tipos aceitos:
+
+* `image/jpeg`
+* `image/png`
+* `image/webp`
+
+Tamanho máximo padrão: `5 MB`.
+
 ---
 
 ### 📸 Acesso às imagens
@@ -152,6 +173,12 @@ DB_USER=postgres
 DB_PASSWORD=postgres
 DB_NAME=idotpet
 ```
+
+Configurações de upload:
+
+* No Docker, o backend usa `/deployments/uploads`, persistido em `./idotpet-backend/uploads`.
+* Em modo local, o padrão é `uploads` dentro de `idotpet-backend`.
+* Para sobrescrever o diretório, defina a variável `UPLOAD_DIR`.
 
 ---
 
